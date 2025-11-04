@@ -1,12 +1,13 @@
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter } from "react-router";
 import "./index.css";
-import Athletes from "./Athletes.jsx";
+import { AuthProvider } from "./contexts/AuthContext.jsx";
+import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Athletes />} />
-    </Routes>
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </BrowserRouter>
 );
