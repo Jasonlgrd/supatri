@@ -6,6 +6,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Athletes />} />
+      <Route path="/login" element={<Login />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
