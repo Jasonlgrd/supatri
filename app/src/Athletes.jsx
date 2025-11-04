@@ -3,12 +3,7 @@ import { NavLink } from "react-router";
 import { Button } from "./ui/Button";
 import { LogOut } from "lucide-react";
 import AthleteCard from "./AthleteCard";
-import { createClient } from "@supabase/supabase-js";
-
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY
-);
+import { supabase } from "./supabaseClient.js";
 
 function Athletes() {
   const [athletes, setAthletes] = useState([]);
